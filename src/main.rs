@@ -64,7 +64,7 @@ async fn main() {
         IP = ip,
     );
 
-    log::info!("URL={}", url);
+    log::debug!("URL={}", url);
     let result = reqwest::get(url).await.unwrap().text().await.unwrap();
     log::info!("{}", result);
 }
